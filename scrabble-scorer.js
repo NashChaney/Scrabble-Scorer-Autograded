@@ -59,10 +59,10 @@ const scoringAlgorithms = [{ name: "Simple Score", description: "Each letter is 
 function scorerPrompt() {
    console.log("Please choose your scoring algorithm:");
   for (let i = 0; i < scoringAlgorithms.length; i++) {
-    console.log(`${i + 1}. ${scoringAlgorithms[i].name}: ${scoringAlgorithms[i].description}`);
+    console.log(`${i}. ${scoringAlgorithms[i].name}: ${scoringAlgorithms[i].description}`);
   }
   choice = input.question("Enter the number of your choice: ");
-  scrabbleScorer = scoringAlgorithms[choice - 1].scorerFunction;
+  scrabbleScorer = scoringAlgorithms[choice].scorerFunction;
 }
 
 let newPointStructure = {};
